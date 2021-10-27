@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -14,16 +20,24 @@ body {
     background-color: lightblue;
 }
 
+/* Barra superiore */
 .upgrade-bar {
     width: calc(100% - 250px);
     height: 100px;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
-    right: 0;
-    
+    right: 0;   
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+/* Contenitore Bottone Upgrade */
+.button-container {
+    margin-right: 10px;
 }
 
+/* Bottone barra superiore */
 .upgrade-button {
     display: inline-block;
     text-transform: uppercase;
@@ -32,50 +46,192 @@ body {
     padding: 10px 32px;
     border: 1px solid white;
     border-radius: 50px;
-}    
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+}  
+/* Hover bottone uprade */
+.upgrade-button:hover {
+    padding: 15px 44px;
 }
 
+
+/* Sezione Principale Centrale */
 main {
     width: 100%;
     height: calc(100% - 100px);
     overflow: hidden;
 
-    background-color: lightpink;
+    background-color: lightskyblue;
 }
 
+/* Colonna Sezione Navigazione Sinistra */
 .main-nav {
+    min-height: 400px;
     float: left;
     width: 250px;
     height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
     
 
-    background-color: lightsteelblue;
+    background-color: black;
 }
 
-
+/* Contenitore Logo */
 .logo {
-    width: 100%;
     height: 100px;
+    background-color: black;
+    display: flex;
+}
+/* Immagine Logo */
+.logo img  {
+    width: 70%;
+    justify-content: center;
+}
+
+/* Menu in alto nella barra laterale sinistra */
+.nav-actions {
+    /* height: 80px; */
+    /* background-color: linen; */
+} 
+
+/* Lista menu in alto sx */
+.nav-actions li {
+    list-style-type: none;
+    padding-left: 15px;
+    margin-top: 10px;
 
 }
 
-.nav-actions {
+/* Testo menu in alto sx */
+ul a {
+    color: white;
+    text-decoration: none;
+}
+/* Hover nav-action */
+/* .nav-actions li:hover {
+    border-left: 3px solid #adff2f; 
+} */
 
-} 
+/* Icone menu in alto sx */
+.menu-icon  {
+    width: 30px;
+}
+
+/* Menu Playlist nella barra laterale sinistra */
+.nav-playlist {
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+/* Lista menu playlist */
+.nav-playlist ul{
+    overflow-y: auto;
+    height: 80%;
+}
+
+.nav-playlist h3 {
+    margin: 15px 15px;
+}
+/* Create Playlist */
+.create-playlist {
+    margin-top: 10px;
+    padding-left: 15px;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 900;
+    display: flex;
+
+}
+
+/* Link Create Playlist */
+.create-playlist a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white
+}
+
+/* Contenitore Plus Icon */
+.plus-container {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-plus {
+    color: black;
+}
+
+.nome-playlist li {
+    margin: 15px 15px;
+    list-style-type: none;
+}
+
+/* Sezione Nav user */
+.nav-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+}
+
+.install-app {
+    margin-left: 15px;
+    width: 80%;
+    border-bottom: 1px solid white;
+}
+
+.profile {
+    margin-left: 15px;
+}
+
+.nav-user {
+    
+}
+.nav-user img {
+    align-content: center;
+}
+
+.nav-user a {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+}
+
+/* Contenitore Icona Installa App */
+.install-app {
+    display: flex;
+}
+
+/* Icona Installa App */
+.install-icon {
+    width: 20px;
+    align-content: center;
+}
+
+
+.profile {
+    display: flex;
+}
+
+.profile-icon  {
+    width: 30px;
+    background-color: grey;
+    border-radius: 50%;
+
+}
+
+
 .main-content {
     float: left;
     padding-top: 100px;
     width: calc(100% - 250px);
-    height: 200px;
 }
 
 
-
+/* Barra inferiore */
 footer {
     height: 100px;
     overflow: hidden;

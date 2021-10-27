@@ -16,23 +16,59 @@
         <!-- MAIN -->
         <main class="clearfix">
             
+            <!-- Barra Superiore -->
             <div class="upgrade-bar">
-                <a class="upgrade-button"  href="">effettua l'upgrade</a>
+                <!-- Bottone Upgrade -->
+                <div class="button-container">
+                    <div>
+                        <a class="upgrade-button"  href="">effettua l'upgrade</a>
+                    </div>
+                </div>
             </div>
 
+            <!-- Barra Laterale Sinistra -->
             <div class="main-nav">
+
+                <!-- Contenitore Logo -->
                 <div class="logo">
                     <img src="img/logo.svg" alt="Logo Spotify">
                 </div>
 
-
+                <!-- Sezione Azioni Barra Laterale Sinistra -->
                 <div class="nav-actions">
                     <ul>
-                        <li>Home</li>
-                        <li>Cerca</li>
-                        <li>La tua libreria</li>
-                        <li>PLAYLIST</li>
-                        <li>Crea Playlist</li>
+                        <li>
+                            <img class="menu-icon"src="img/home.svg" alt="Home"> 
+                            <a class="home-link" href="#">Home</a>
+                        </li>
+
+                        <li>
+                            <img class="menu-icon" src="img/search.svg" alt="Search">
+                            <a href="#">Cerca</a>
+                        </li>
+
+                        <li>
+                            <img class="menu-icon" src="img/libreria.svg" alt="Library">
+                            <a href="#">La tua libreria</a>
+                        </li>
+                    </ul>
+                </div>    
+
+                <!-- Sezione Playlist Barra Laterale Sinistra -->
+                <div class="nav-playlist">
+                    <h3>PLAYLIST</h3>
+                    <div class="create-playlist">
+
+                        <div class="plus-container">
+                            <i class="fas fa-plus"></i>
+                        </div>
+
+                        <div>
+                            <a href="#">Crea Playlist</a>
+                        </div>
+                    </div>
+                    
+                    <ul class="nome-playlist">
                         <li>Nome Playlist</li>
                         <li>Nome Playlist</li>
                         <li>Nome Playlist</li>
@@ -41,11 +77,27 @@
                         <li>Nome Playlist</li>
                         <li>Nome Playlist</li>
                     </ul>
-
                 </div>
-            </div>
 
-            <div class="main-content "></div>
+                <!-- Sezione User Barra Laterale Sinistra -->
+                <div class="nav-user">
+
+                    <div class="install-app">
+                        <img class="install-icon" src="img/download.svg" alt="Installa App">
+                       <a href="">Installa App</a> 
+                    </div>
+
+                    <div class="profile"> 
+                        <img class="profile-icon" src="img/profile.svg" alt="Immagine Profilo">
+                       <a href="">John Doe</a> 
+                    </div>
+                </div>
+
+            </div>
+            <!-- Contenitore Centrale -->
+            <div class="main-content ">
+                
+            </div>
         </main>
         <!-- FOOTER -->
         <footer></footer>
